@@ -1,3 +1,0 @@
-[workspace]
-members = ["shared", "client", "server" , "server/migration"]
-resolver = "2"
