@@ -61,6 +61,7 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           path: './dist'
+          name: paula
       
       - name: Deploy to pages
         id: deployment
