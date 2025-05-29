@@ -4,8 +4,7 @@ on:
   push:
     branches: ["🐱"]
     paths:
-      - "client/**"
-      - "shared/**"
+      - "**"
       - ".github/workflows/github.yml"
 
   workflow_dispatch:

@@ -1,10 +1,9 @@
 use sycamore::prelude::*;
 use web_sys::{wasm_bindgen::prelude::*, window};
 
-mod api;
 mod components;
-mod routing;
 mod fingerprint;
+mod routing;
 
 #[component]
 pub fn App() -> View {

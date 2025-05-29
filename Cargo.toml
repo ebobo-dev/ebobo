@@ -1,3 +1,18 @@
-[workspace]
-members = ["shared", "client", "server" , "server/migration"]
-resolver = "2"
+[package]
+name = "ebobo-client"
+version = "0.2.1"
+edition = "2021"
+
+[dependencies]
+sycamore = { version = "0.9.0-beta.2", features = ["suspense"] }
+sycamore-router = "0.9.0-beta.2"
+wasm-fingerprint = { git = "https://github.com/dotnicht/wasm-fingerprint.git" }
+web-sys = "0.3.68"
+log = "0.4.17"
+console_log = "1.0.0"
+console_error_panic_hook = "0.1.7"
+reqwasm = "0.5.0"
+serde = { version = "1.0.163", features = ["derive"] }
+serde_json = "1.0.96"
+futures = "0.3.30"
+wasm-bindgen = "0.2.92"
