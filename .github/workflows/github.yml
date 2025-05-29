@@ -40,12 +40,12 @@ jobs:
         uses: jetli/trunk-action@v0.4.0
 
       - name: Build
-        working-directory: ./client
+        working-directory: .
         run: |
           cargo build --target wasm32-unknown-unknown --release
 
       - name: Build with Trunk
-        working-directory: ./client
+        working-directory: .
         run: |
           trunk build --release
 
@@ -55,7 +55,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './client/dist'
+          path: './dist'
           
       - name: Deploy to pages
         id: deployment
