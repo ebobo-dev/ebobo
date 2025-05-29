@@ -19,7 +19,6 @@ pub async fn Root() -> View {
 async fn Switch(route: ReadSignal<AppRoutes>) -> View {
     view! {(match route.get() {
             AppRoutes::Index => view! { components::index::Index() },
-            AppRoutes::Arena => view! { components::arena::Dashboard() },
             AppRoutes::NotFound => view! { "lost?"}
         })
     }
@@ -29,8 +28,6 @@ async fn Switch(route: ReadSignal<AppRoutes>) -> View {
 enum AppRoutes {
     #[to("")]
     Index,
-    #[to("/arena")]
-    Arena,
     #[not_found]
     NotFound,
 }
