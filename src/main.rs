@@ -2,7 +2,6 @@ use sycamore::prelude::*;
 use web_sys::{wasm_bindgen::prelude::*, window};
 
 mod components;
-mod fingerprint;
 mod routing;
 
 #[component]
