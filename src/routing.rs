@@ -8,19 +8,12 @@ pub async fn Root() -> View {
     view! {
         Router(
             integration=HistoryIntegration::new(),
-            view=|route: ReadSignal<AppRoutes>| view! {
-                Switch(route=route)
+            view=|target: ReadSignal<AppRoutes>| view! {
+                (match target.get() {
+                AppRoutes::Index => view! { components::index::Index() },
+                AppRoutes::NotFound => view! { "lost?"}})
             }
         )
-    }
-}
-
-#[component(inline_props)]
-async fn Switch(route: ReadSignal<AppRoutes>) -> View {
-    view! {(match route.get() {
-            AppRoutes::Index => view! { components::index::Index() },
-            AppRoutes::NotFound => view! { "lost?"}
-        })
     }
 }
 

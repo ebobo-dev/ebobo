@@ -1,12 +1,11 @@
 [package]
-name = "ebobo-client"
+name = "ebobo-paula"
 version = "0.2.1"
 edition = "2021"
 
 [dependencies]
 sycamore = { version = "0.9.0-beta.2", features = ["suspense"] }
 sycamore-router = "0.9.0-beta.2"
-wasm-fingerprint = { git = "https://github.com/dotnicht/wasm-fingerprint.git" }
 web-sys = "0.3.68"
 log = "0.4.17"
 console_log = "1.0.0"
